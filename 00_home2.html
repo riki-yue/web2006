@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			/* 六个布局 */
+			#content{
+				width: 1000px;
+				height: 632px;/*设置了高度居然space-between会自动排列拉开垂直距离，可以不用margin-bottom*/
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			#content>div{
+				background-color: #e8e8e8;
+			}
+			.top_height{
+				height: 377px;
+			}
+			.bottom_height{
+				height: 233px;
+			}
+			#content>div:first-child{
+				width: 609px;
+				/* margin-bottom: 10px; */
+				position: relative;
+			}
+			#content>div:nth-child(2){
+				width: 381px;
+				/* margin-bottom: 10px; */
+			}
+			#content>div:nth-child(3){
+				width: 377px;
+			}
+			#content>div:nth-child(4){
+				width: 198px;
+			}
+			#content>div:nth-child(5){
+				width: 198px;
+			}
+			#content>div:nth-child(6){
+				width: 198px;
+			}
+			/* 内容 */
+			.desc{
+				width: 245px;
+				height: 243px;
+				margin: 55px 0 0 65px;
+				display: flex;
+				flex-direction: column;
+			}
+			/*居然没有引起外边距溢出，是因为父元素是个弹性项目。被固定死了*/
+			#content>div:first-child::before{
+				content: "";
+				display: table;
+			}
+			.title{color: #333;font-size: 32px;}
+			.detaile{color: #666;font-size: 12px;margin-bottom: 24px;}
+			.price{color: #0aa1ed;font-size: 24px;margin-bottom: 12px;}
+			.veiw{
+				width: 130px;
+				height: 40px;
+				display: inline-block;
+				background-image: linear-gradient(to bottom,#27b1f6 0%, #0aa1ed 100%);
+				border-radius: 3px;
+				color: #fff;
+				font-size: 16px;
+				text-align: center;
+				line-height: 40px;
+				text-decoration: none;
+			}
+			#content>div:first-child>img{
+				position: absolute;
+				top: 56px;
+				right: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="" style="width: 1000px;height: 60px;margin: 0 auto;background-color: #0AA1ED;">
+			
+		</div>
+		<div id="content">
+			<div class="top_height">
+				<div class="desc">
+					<p class="title">Apple MacBook Air系列</p>
+					<p class="detaile">酷睿双核i5处理器|256GB SSD|8GB内存|英特尔HD显卡620含共享显卡内存</p>
+					<p class="price">￥6988.00</p>
+					<a href="#" class="veiw">查看详情</a>
+				</div>
+				<img src="study_computer_img1.png" >
+			</div>
+			<div class="top_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+		</div>
+	</body>
+</html>
